@@ -1,4 +1,14 @@
 <html>
+
+<body>
+    <div id='game'>
+        <button onclick='makeOne()' width='200' height='30'>Add PacMan</button>
+        <button onclick='update()' width='200' height='30'>Start Game</button>
+    </div>
+</body>
+
+</html>
+
 <SCRIPT>
 
     var pos = 0;
@@ -47,7 +57,7 @@
     }
 
     function checkCollisions(item) {
-        if (item.position.x + item.velocity.x + item.newimg.width > window.innerwidth || item.position.x + item.velocity.x < 0)
+        if (item.position.x + item.velocity.x + item.newimg.width > window.innerWidth || item.position.x + item.velocity.x < 0)
             item.velocity.x = -item.velocity.x;
         if (item.position.y + item.velocity.y + item.newimg.height > window.innerHeight || item.position.y + item.velocity.y < 0)
             item.velocity.y = -item.velocity.y;
@@ -58,12 +68,3 @@
     }
 
 </SCRIPT>
-
-<body>
-    <div id='game'>
-        <button onclick='makeOne()' width='200' height='30'>Add PacMan</button>
-        <button onclick='update()' width='200' height='30'>Start Game</button>
-    </div>
-</body>
-
-</html>
